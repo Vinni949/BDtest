@@ -65,7 +65,7 @@ namespace BDTest
                 string connStr = "server=localhost;user=sa;database=Hospital;password=SAsa;";
                 SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();
-                string SQLcom = String.Format("insert into PatientReception (Patient_ID, Doctor_ID) values ('{0}','{1}')", Doctor_ID, Patient_ID);
+                string SQLcom = String.Format("insert into PatientReception (Patient_ID, Doctor_ID) values ('{0}','{1}')", Patient_ID, Doctor_ID);
                 SqlCommand command = new SqlCommand(SQLcom, conn);
                 command.ExecuteNonQuery();
                 MessageBox.Show(String.Format("Пациент прикреплен к доктору."));

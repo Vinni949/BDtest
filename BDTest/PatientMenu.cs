@@ -20,8 +20,17 @@ namespace BDTest
 
         private void PatientMenu_Load(object sender, EventArgs e)
         {
-           // TODO: данная строка кода позволяет загрузить данные в таблицу "hospitalDataSet2.Patient". При необходимости она может быть перемещена или удалена.
-            this.patientTableAdapter.Fill(this.hospitalDataSet2.Patient);
+            string connStr = "server=localhost;user=sa;database=Hospital;password=SAsa;";
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            string SQLcom = String.Format("Select p.FirstName as 'Фамилия пациента',p.LastName as 'Имя пациента',p.Age as 'Возраст пациента',p.Adress as 'Адрес пациента',d.FirstName "
+                +"as 'Фамилия доктора',d.LastName as 'Имя доктора', s.TitleSpecialization as 'Специализация', p.complaints as 'Диагноз' from patient p "
+                +"inner join PatientReception pr on p.ID = pr.Patient_ID inner join Doctor d on d.ID = pr.Doctor_ID inner join Specialization s on d.specialization_ID = s.ID");
+            SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+            dataGridView1.DataSource = dataSet.Tables[0];
+            conn.Close();
 
         }
 
@@ -55,8 +64,14 @@ namespace BDTest
                     new SqlParameter("@id",id)
                };
                 command.ExecuteNonQuery();
-                MessageBox.Show(String.Format("Изменен госпиталь."));
-                this.patientTableAdapter.Fill(this.hospitalDataSet2.Patient);
+                MessageBox.Show(String.Format("."));
+                MessageBox.Show(String.Format("Пациент изменен."));
+                SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                dataGridView1.DataSource = dataSet.Tables[0];
+                conn.Close();
+
             }
         }
 
@@ -65,19 +80,24 @@ namespace BDTest
             if (MessageBox.Show("Добавить введенного пациента?", "Добавление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                string FirstName = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                string LastName = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                string FirstName = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                string LastName = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 string Address = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                int Age = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[4].Value);
-                string complaints= this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                int Age = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[2].Value);
+                string complaints= this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 string connStr = "server=localhost;user=sa;database=Hospital;password=SAsa;";
                 SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();
-                string SQLcom = String.Format("insert into Patient(FirstName, LastName, Adress, Age, complaints) values ('{0}','{1}','{2}','{3}','{4}')", FirstName, LastName, Address, Age, complaints);
+                string SQLcom = String.Format("insert into Patient(FirstName, LastName, Adress, Age, complaints) values "
+                    +"('{0}','{1}','{2}','{3}','{4}')", FirstName, LastName, Address, Age, complaints);
                 SqlCommand command = new SqlCommand(SQLcom, conn);
                 command.ExecuteNonQuery();
                 MessageBox.Show(String.Format("Добавлен пациент."));
-                this.patientTableAdapter.Fill(this.hospitalDataSet2.Patient);
+                SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                dataGridView1.DataSource = dataSet.Tables[0];
+                conn.Close();
             }
         }
 
@@ -100,8 +120,11 @@ namespace BDTest
                             SqlCommand command = new SqlCommand(SQLcom, conn);
                             command.ExecuteNonQuery();
                             MessageBox.Show(String.Format(" пациент № " + id + "  удален."));
-                            this.patientTableAdapter.Fill(this.hospitalDataSet2.Patient);
-
+                            SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
+                            DataSet dataSet = new DataSet();
+                            adapter.Fill(dataSet);
+                            dataGridView1.DataSource = dataSet.Tables[0];
+                            conn.Close();
                         }
                     }
                 }
@@ -119,14 +142,16 @@ namespace BDTest
                         SqlCommand command = new SqlCommand(SQLcom, conn);
                         command.ExecuteNonQuery();
                         MessageBox.Show(String.Format("Пациент №  " + id + "  удален."));
-                        this.patientTableAdapter.Fill(this.hospitalDataSet2.Patient);
-
+                        SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet);
+                        dataGridView1.DataSource = dataSet.Tables[0];
+                        conn.Close();
                     }
                 }
             }
             else
                 MessageBox.Show("Для удаления необходимо выделить строку.");
-            this.patientTableAdapter.Fill(this.hospitalDataSet2.Patient);
         }
     }
 }

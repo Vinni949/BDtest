@@ -29,104 +29,22 @@ namespace BDTest
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complaintsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitalDataSet2 = new BDTest.HospitalDataSet2();
-            this.patientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Back = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
-            this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Delletedbutton1 = new System.Windows.Forms.Button();
             this.AddPatient = new System.Windows.Forms.Button();
-            this.patientTableAdapter = new BDTest.HospitalDataSet2TableAdapters.PatientTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.adressDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn,
-            this.complaintsDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.patientBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 192);
             this.dataGridView1.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            // 
-            // complaintsDataGridViewTextBoxColumn
-            // 
-            this.complaintsDataGridViewTextBoxColumn.DataPropertyName = "complaints";
-            this.complaintsDataGridViewTextBoxColumn.HeaderText = "complaints";
-            this.complaintsDataGridViewTextBoxColumn.Name = "complaintsDataGridViewTextBoxColumn";
-            // 
-            // patientBindingSource2
-            // 
-            this.patientBindingSource2.DataMember = "Patient";
-            this.patientBindingSource2.DataSource = this.hospitalDataSet2;
-            // 
-            // hospitalDataSet2
-            // 
-            this.hospitalDataSet2.DataSetName = "HospitalDataSet2";
-            this.hospitalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientBindingSource1
-            // 
-            this.patientBindingSource1.DataMember = "Patient";
-            // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataMember = "Patient";
             // 
             // Back
             // 
@@ -148,10 +66,6 @@ namespace BDTest
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // hospitalBindingSource
-            // 
-            this.hospitalBindingSource.DataMember = "Hospital";
-            // 
             // Delletedbutton1
             // 
             this.Delletedbutton1.Location = new System.Drawing.Point(254, 369);
@@ -171,10 +85,6 @@ namespace BDTest
             this.AddPatient.Text = "Добавить";
             this.AddPatient.UseVisualStyleBackColor = true;
             this.AddPatient.Click += new System.EventHandler(this.AddPatient_Click);
-            // 
-            // patientTableAdapter
-            // 
-            this.patientTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -206,11 +116,6 @@ namespace BDTest
             this.Text = "PatientMenu";
             this.Load += new System.EventHandler(this.PatientMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,20 +126,8 @@ namespace BDTest
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.BindingSource hospitalBindingSource;
         private System.Windows.Forms.Button Delletedbutton1;
-        private System.Windows.Forms.BindingSource patientBindingSource;
-        private System.Windows.Forms.BindingSource patientBindingSource1;
         private System.Windows.Forms.Button AddPatient;
-        private HospitalDataSet2 hospitalDataSet2;
-        private System.Windows.Forms.BindingSource patientBindingSource2;
-        private HospitalDataSet2TableAdapters.PatientTableAdapter patientTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn complaintsDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
     }
 }
