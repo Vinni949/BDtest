@@ -23,7 +23,7 @@ namespace BDTest
             string connStr = "server=localhost;user=sa;database=Hospital;password=SAsa;";
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
-            string SQLcom = String.Format("Select p.FirstName as 'Фамилия пациента',p.LastName as 'Имя пациента',p.Age as 'Возраст пациента',p.Adress as 'Адрес пациента',d.FirstName "
+            string SQLcom = String.Format("Select p.ID, p.FirstName as 'Фамилия пациента',p.LastName as 'Имя пациента',p.Age as 'Возраст пациента',p.Adress as 'Адрес пациента',d.FirstName "
                 +"as 'Фамилия доктора',d.LastName as 'Имя доктора', s.TitleSpecialization as 'Специализация', p.complaints as 'Диагноз' from patient p "
                 +"inner join PatientReception pr on p.ID = pr.Patient_ID inner join Doctor d on d.ID = pr.Doctor_ID inner join Specialization s on d.specialization_ID = s.ID");
             SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
