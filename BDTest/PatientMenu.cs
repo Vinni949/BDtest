@@ -66,10 +66,7 @@ namespace BDTest
                 command.ExecuteNonQuery();
                 MessageBox.Show(String.Format("."));
                 MessageBox.Show(String.Format("Пациент изменен."));
-                SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
-                dataGridView1.DataSource = dataSet.Tables[0];
+       
                 conn.Close();
 
             }
@@ -93,10 +90,6 @@ namespace BDTest
                 SqlCommand command = new SqlCommand(SQLcom, conn);
                 command.ExecuteNonQuery();
                 MessageBox.Show(String.Format("Добавлен пациент."));
-                SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
-                dataGridView1.DataSource = dataSet.Tables[0];
                 conn.Close();
             }
         }
@@ -120,10 +113,6 @@ namespace BDTest
                             SqlCommand command = new SqlCommand(SQLcom, conn);
                             command.ExecuteNonQuery();
                             MessageBox.Show(String.Format(" пациент № " + id + "  удален."));
-                            SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
-                            DataSet dataSet = new DataSet();
-                            adapter.Fill(dataSet);
-                            dataGridView1.DataSource = dataSet.Tables[0];
                             conn.Close();
                         }
                     }
@@ -142,10 +131,6 @@ namespace BDTest
                         SqlCommand command = new SqlCommand(SQLcom, conn);
                         command.ExecuteNonQuery();
                         MessageBox.Show(String.Format("Пациент №  " + id + "  удален."));
-                        SqlDataAdapter adapter = new SqlDataAdapter(SQLcom, conn);
-                        DataSet dataSet = new DataSet();
-                        adapter.Fill(dataSet);
-                        dataGridView1.DataSource = dataSet.Tables[0];
                         conn.Close();
                     }
                 }

@@ -22,6 +22,8 @@ namespace BDTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "hospitalDataSet6.Specialization". При необходимости она может быть перемещена или удалена.
+            this.specializationTableAdapter.Fill(this.hospitalDataSet6.Specialization);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "hospitalDataSet4.HospitalType". При необходимости она может быть перемещена или удалена.
             this.hospitalTypeTableAdapter.Fill(this.hospitalDataSet4.HospitalType);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "hospitalDataSet1.Doctor". При необходимости она может быть перемещена или удалена.

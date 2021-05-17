@@ -37,20 +37,6 @@ namespace BDTest
             this.hospitalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.experience = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialization_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.experienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specializationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hospitalOfficeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hospitalIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.hospitalDataSet1 = new BDTest.HospitalDataSet1();
             this.doctorBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
@@ -62,12 +48,28 @@ namespace BDTest
             this.doctorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.doctorTableAdapter = new BDTest.HospitalDataSet1TableAdapters.DoctorTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hospitalTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitalDataSet4 = new BDTest.HospitalDataSet4();
             this.hospitalTypeTableAdapter = new BDTest.HospitalDataSet4TableAdapters.HospitalTypeTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.experience = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialization_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.experienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specializationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalOfficeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalDataSet6 = new BDTest.HospitalDataSet6();
+            this.specializationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.specializationTableAdapter = new BDTest.HospitalDataSet6TableAdapters.SpecializationTableAdapter();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TitleSpecialization = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,6 +85,8 @@ namespace BDTest
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specializationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Deletedbutton
@@ -143,7 +147,6 @@ namespace BDTest
             this.LastName,
             this.experience,
             this.specialization_ID,
-            this.iDDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
             this.experienceDataGridViewTextBoxColumn,
@@ -157,93 +160,6 @@ namespace BDTest
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 192);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "LastName";
-            this.LastName.Name = "LastName";
-            // 
-            // experience
-            // 
-            this.experience.DataPropertyName = "experience";
-            this.experience.HeaderText = "experience";
-            this.experience.Name = "experience";
-            // 
-            // specialization_ID
-            // 
-            this.specialization_ID.DataPropertyName = "specialization_ID";
-            this.specialization_ID.HeaderText = "specialization_ID";
-            this.specialization_ID.Name = "specialization_ID";
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // experienceDataGridViewTextBoxColumn
-            // 
-            this.experienceDataGridViewTextBoxColumn.DataPropertyName = "experience";
-            this.experienceDataGridViewTextBoxColumn.HeaderText = "experience";
-            this.experienceDataGridViewTextBoxColumn.Name = "experienceDataGridViewTextBoxColumn";
-            // 
-            // specializationIDDataGridViewTextBoxColumn
-            // 
-            this.specializationIDDataGridViewTextBoxColumn.DataPropertyName = "specialization_ID";
-            this.specializationIDDataGridViewTextBoxColumn.HeaderText = "specialization_ID";
-            this.specializationIDDataGridViewTextBoxColumn.Name = "specializationIDDataGridViewTextBoxColumn";
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            // 
-            // categoryIDDataGridViewTextBoxColumn
-            // 
-            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "category_ID";
-            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "category_ID";
-            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
-            // 
-            // hospitalOfficeIDDataGridViewTextBoxColumn
-            // 
-            this.hospitalOfficeIDDataGridViewTextBoxColumn.DataPropertyName = "HospitalOffice_ID";
-            this.hospitalOfficeIDDataGridViewTextBoxColumn.HeaderText = "HospitalOffice_ID";
-            this.hospitalOfficeIDDataGridViewTextBoxColumn.Name = "hospitalOfficeIDDataGridViewTextBoxColumn";
-            // 
-            // hospitalIDDataGridViewTextBoxColumn
-            // 
-            this.hospitalIDDataGridViewTextBoxColumn.DataPropertyName = "Hospital_ID";
-            this.hospitalIDDataGridViewTextBoxColumn.HeaderText = "Hospital_ID";
-            this.hospitalIDDataGridViewTextBoxColumn.Name = "hospitalIDDataGridViewTextBoxColumn";
             // 
             // doctorBindingSource5
             // 
@@ -293,24 +209,12 @@ namespace BDTest
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn2,
-            this.nameDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.hospitalTypeBindingSource;
+            this.TitleSpecialization});
+            this.dataGridView2.DataSource = this.specializationBindingSource1;
             this.dataGridView2.Location = new System.Drawing.Point(524, 75);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 30;
-            // 
-            // iDDataGridViewTextBoxColumn2
-            // 
-            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
             // hospitalTypeBindingSource
             // 
@@ -337,6 +241,113 @@ namespace BDTest
             this.label1.Size = new System.Drawing.Size(296, 25);
             this.label1.TabIndex = 31;
             this.label1.Text = "Update Hospital Data Base";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "LastName";
+            this.LastName.Name = "LastName";
+            // 
+            // experience
+            // 
+            this.experience.DataPropertyName = "experience";
+            this.experience.HeaderText = "experience";
+            this.experience.Name = "experience";
+            // 
+            // specialization_ID
+            // 
+            this.specialization_ID.DataPropertyName = "specialization_ID";
+            this.specialization_ID.HeaderText = "specialization_ID";
+            this.specialization_ID.Name = "specialization_ID";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // experienceDataGridViewTextBoxColumn
+            // 
+            this.experienceDataGridViewTextBoxColumn.DataPropertyName = "experience";
+            this.experienceDataGridViewTextBoxColumn.HeaderText = "experience";
+            this.experienceDataGridViewTextBoxColumn.Name = "experienceDataGridViewTextBoxColumn";
+            // 
+            // specializationIDDataGridViewTextBoxColumn
+            // 
+            this.specializationIDDataGridViewTextBoxColumn.DataPropertyName = "specialization_ID";
+            this.specializationIDDataGridViewTextBoxColumn.HeaderText = "specialization_ID";
+            this.specializationIDDataGridViewTextBoxColumn.Name = "specializationIDDataGridViewTextBoxColumn";
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            // 
+            // categoryIDDataGridViewTextBoxColumn
+            // 
+            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "category_ID";
+            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "category_ID";
+            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
+            // 
+            // hospitalOfficeIDDataGridViewTextBoxColumn
+            // 
+            this.hospitalOfficeIDDataGridViewTextBoxColumn.DataPropertyName = "HospitalOffice_ID";
+            this.hospitalOfficeIDDataGridViewTextBoxColumn.HeaderText = "HospitalOffice_ID";
+            this.hospitalOfficeIDDataGridViewTextBoxColumn.Name = "hospitalOfficeIDDataGridViewTextBoxColumn";
+            // 
+            // hospitalIDDataGridViewTextBoxColumn
+            // 
+            this.hospitalIDDataGridViewTextBoxColumn.DataPropertyName = "Hospital_ID";
+            this.hospitalIDDataGridViewTextBoxColumn.HeaderText = "Hospital_ID";
+            this.hospitalIDDataGridViewTextBoxColumn.Name = "hospitalIDDataGridViewTextBoxColumn";
+            // 
+            // hospitalDataSet6
+            // 
+            this.hospitalDataSet6.DataSetName = "HospitalDataSet6";
+            this.hospitalDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // specializationBindingSource1
+            // 
+            this.specializationBindingSource1.DataMember = "Specialization";
+            this.specializationBindingSource1.DataSource = this.hospitalDataSet6;
+            // 
+            // specializationTableAdapter
+            // 
+            this.specializationTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            this.iDDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // TitleSpecialization
+            // 
+            this.TitleSpecialization.DataPropertyName = "TitleSpecialization";
+            this.TitleSpecialization.HeaderText = "TitleSpecialization";
+            this.TitleSpecialization.Name = "TitleSpecialization";
             // 
             // UpdateDoctors
             // 
@@ -373,6 +384,8 @@ namespace BDTest
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specializationBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,7 +402,6 @@ namespace BDTest
         private System.Windows.Forms.BindingSource doctorBindingSource;
         private System.Windows.Forms.BindingSource doctorBindingSource1;
         private System.Windows.Forms.BindingSource doctorBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource doctorBindingSource3;
         private System.Windows.Forms.BindingSource specializationBindingSource;
         private System.Windows.Forms.BindingSource hospitalBindingSource2;
@@ -397,6 +409,11 @@ namespace BDTest
         private HospitalDataSet1 hospitalDataSet1;
         private System.Windows.Forms.BindingSource doctorBindingSource5;
         private HospitalDataSet1TableAdapters.DoctorTableAdapter doctorTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private HospitalDataSet4 hospitalDataSet4;
+        private System.Windows.Forms.BindingSource hospitalTypeBindingSource;
+        private HospitalDataSet4TableAdapters.HospitalTypeTableAdapter hospitalTypeTableAdapter;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
@@ -410,12 +427,10 @@ namespace BDTest
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hospitalOfficeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hospitalIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private HospitalDataSet4 hospitalDataSet4;
-        private System.Windows.Forms.BindingSource hospitalTypeBindingSource;
-        private HospitalDataSet4TableAdapters.HospitalTypeTableAdapter hospitalTypeTableAdapter;
+        private HospitalDataSet6 hospitalDataSet6;
+        private System.Windows.Forms.BindingSource specializationBindingSource1;
+        private HospitalDataSet6TableAdapters.SpecializationTableAdapter specializationTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TitleSpecialization;
     }
 }

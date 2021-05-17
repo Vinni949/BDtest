@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HospitalDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LinkPatientToDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +230,17 @@
     </None>
     <None Include="HospitalDataSet5.xss">
       <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet6.xsc">
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet6.xss">
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
