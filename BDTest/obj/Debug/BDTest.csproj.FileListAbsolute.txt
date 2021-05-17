@@ -1,0 +1,17 @@
+C:\Users\pumba\source\repos\BDTest\BDTest\bin\Debug\BDTest.exe.config
+C:\Users\pumba\source\repos\BDTest\BDTest\bin\Debug\BDTest.exe
+C:\Users\pumba\source\repos\BDTest\BDTest\bin\Debug\BDTest.pdb
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.csprojAssemblyReference.cache
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.Properties.Resources.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.csproj.GenerateResource.cache
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.csproj.CoreCompileInputs.cache
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.exe
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.pdb
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.Menu.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.HospitalMenu.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.DoctorsMenu.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.PatientMenu.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.UpdateHospital.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.DocToHosp.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.UpdateDoctors.resources
+C:\Users\pumba\source\repos\BDTest\BDTest\obj\Debug\BDTest.LinkPatientToDoctor.resources
